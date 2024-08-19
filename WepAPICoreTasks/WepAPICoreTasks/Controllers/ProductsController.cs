@@ -9,6 +9,7 @@ namespace WepAPICoreTasks.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+
         private readonly MyDbContext _db;
 
         public ProductsController(MyDbContext myDbContext)
@@ -19,14 +20,14 @@ namespace WepAPICoreTasks.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var Products = _db.Products.ToList();
-            return Ok(Products);
+            var products = _db.Products.Include(p => p.Category).ToList();
+            return Ok(products);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetByID(int id) 
+        public IActionResult GetByID(int id)
         {
-            var Products = _db.Products.Find(id);
+            var Products = _db.Products.Include(p => p.Category).FirstOrDefault(p => p.ProductId == id);
             return Ok(Products);
         }
     }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WepAPICoreTasks.Models;
 
 namespace WepAPICoreTasks.Controllers
@@ -9,8 +8,8 @@ namespace WepAPICoreTasks.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly MyDbContext _myDbContext;
 
+        private readonly MyDbContext _myDbContext;
         public CategoriesController(MyDbContext myDbContext)
         {
             _myDbContext = myDbContext;
@@ -18,7 +17,7 @@ namespace WepAPICoreTasks.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get() 
+        public IActionResult Get()
         {
             var categories = _myDbContext.Categories.ToList();
             return Ok(categories);
@@ -30,6 +29,5 @@ namespace WepAPICoreTasks.Controllers
             var categories = _myDbContext.Categories.Find(id);
             return Ok(categories);
         }
-
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WepAPICoreTasks", "WepAPICoreTasks\WepAPICoreTasks.csproj", "{0CC2D13E-7A38-4EFC-BAE8-68015F56F33C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WepAPICoreTasks", "WepAPICoreTasks\WepAPICoreTasks.csproj", "{2C0853EC-9A6E-40C6-98BE-1BA84CF8C132}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0CC2D13E-7A38-4EFC-BAE8-68015F56F33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CC2D13E-7A38-4EFC-BAE8-68015F56F33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CC2D13E-7A38-4EFC-BAE8-68015F56F33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CC2D13E-7A38-4EFC-BAE8-68015F56F33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0853EC-9A6E-40C6-98BE-1BA84CF8C132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0853EC-9A6E-40C6-98BE-1BA84CF8C132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0853EC-9A6E-40C6-98BE-1BA84CF8C132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0853EC-9A6E-40C6-98BE-1BA84CF8C132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CA09ABD9-A488-4603-868B-BB4F67A324EF}
+		SolutionGuid = {24AEE796-1599-4640-9492-5122EC392CED}
 	EndGlobalSection
 EndGlobal

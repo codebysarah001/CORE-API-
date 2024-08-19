@@ -38,13 +38,10 @@ public partial class MyDbContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6EDA7F0C582");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED3DF9F280");
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
-            entity.Property(e => e.CategoryId)
-                .HasMaxLength(255)
-                .IsUnicode(false)
-                .HasColumnName("CategoryID");
+            entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .IsUnicode(false);
@@ -55,6 +52,10 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.ProductName)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+
+            //entity.HasOne(d => d.Category).WithMany(p => p.Products)
+            //    .HasForeignKey(d => d.CategoryId)
+            //    .HasConstraintName("FK__Products__Catego__44FF419A");
         });
 
         OnModelCreatingPartial(modelBuilder);
