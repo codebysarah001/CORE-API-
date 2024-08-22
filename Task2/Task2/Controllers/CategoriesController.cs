@@ -29,9 +29,14 @@ namespace Task2.Controllers
 
         // GetCategoryById 
         [HttpGet]
-        [Route("Category/{id:int}")]
+        [Route("Category/{id:min(5)}")]
         public IActionResult GetByID(int id) 
         {
+            if (id < 0)
+            {
+                return BadRequest();
+            }
+
             var categories = _db.Categories.Where(c => c.CategoryId == id).FirstOrDefault();
             return Ok(categories);
         }
@@ -42,6 +47,9 @@ namespace Task2.Controllers
         [Route("Category/Name/{name}")]
         public IActionResult GetByName(string name) 
         {
+            if (name == null) { 
+                return BadRequest();
+            }
             var cat = _db.Categories.Where(c => c.CategoryName == name).FirstOrDefault();
             return Ok(cat);
         }
@@ -52,6 +60,11 @@ namespace Task2.Controllers
         public IActionResult Delete(int id)
         {
             var category = _db.Categories.Find(id);
+
+            if (id < 0)
+            {
+                return BadRequest();
+            }
 
             if (category == null)
             {

@@ -26,9 +26,14 @@ namespace Task2.Controllers
         }
 
         // GetProductById 
-        [HttpGet("Product/ {id}")]
+        [HttpGet("Product/ {id:max(10)}")]
         public IActionResult GetByID([FromQuery] int id)
         {
+            if (id < 0)
+            {
+                return BadRequest();
+            }
+
             var product = _db.Products.Where(c => c.ProductId == id).FirstOrDefault();
             return Ok(product);
         }
@@ -38,6 +43,10 @@ namespace Task2.Controllers
         [HttpGet("Name/{name}")]
         public IActionResult GetByName([FromQuery] string name)
         {
+            if (name == null)
+            {
+                return BadRequest();   
+            }
             var product = _db.Products.Where(c => c.ProductName == name).FirstOrDefault();
             return Ok(product);
         }
@@ -46,8 +55,13 @@ namespace Task2.Controllers
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete([FromQuery] int id)
         {
-            var p = _db.Products.Find(id);
+            if (id < 0)
+            {
+                return BadRequest();
+            }
 
+            var p = _db.Products.Find(id);
+            
             if (p == null)
             {
                 return NotFound();

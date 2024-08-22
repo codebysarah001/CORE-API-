@@ -31,6 +31,10 @@ namespace Task2.Controllers
         [Route("Users/{id:int}")]
         public IActionResult GetByID(int id)
         {
+            if (id < 0)
+            {
+                return BadRequest();
+            }
             var users = _db.Users.Where(c => c.UserId == id).FirstOrDefault();
             return Ok(users);
         }
@@ -41,6 +45,11 @@ namespace Task2.Controllers
         [Route("Users/Name/{name}")]
         public IActionResult GetByName(string name)
         {
+            if (name == null)
+            {
+                return BadRequest();
+            }
+
             var user = _db.Users.Where(c => c.Username == name).FirstOrDefault();
             return Ok(user);
         }
@@ -50,6 +59,10 @@ namespace Task2.Controllers
         [Route("Users/Delete/{id:int}")]
         public IActionResult Delete(int id)
         {
+            if (id < 0)
+            {
+                return BadRequest();
+            }
             var user = _db.Users.Find(id);
 
             if (user == null)

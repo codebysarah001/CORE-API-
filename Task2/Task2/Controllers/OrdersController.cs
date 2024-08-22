@@ -29,6 +29,10 @@ namespace Task2.Controllers
         [HttpGet("Orders/ {id}")]
         public IActionResult GetByID([FromQuery] int id)
         {
+            if (id < 0)
+            {
+                return BadRequest();
+            }
             var order = _db.Orders.Where(c => c.OrderId == id).FirstOrDefault();
             return Ok(order);
         }
@@ -38,6 +42,11 @@ namespace Task2.Controllers
         [HttpDelete("Delete/{id}")]
         public IActionResult Delete([FromQuery] int id)
         {
+            if (id < 0)
+            {
+                return BadRequest();
+            }
+
             var order = _db.Orders.Find(id);
 
             if (order == null)
