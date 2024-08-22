@@ -59,25 +59,24 @@ namespace Task2.Controllers
         [Route("Category/Delete/{id:int}")]
         public IActionResult Delete(int id)
         {
-            var category = _db.Categories.Find(id);
-
             if (id < 0)
             {
                 return BadRequest();
             }
 
+            var products = _db.Products.Where(model => model.CategoryId == id).ToList();
+            _db.Products.RemoveRange(products);
+            _db.SaveChanges();
+
+
+            var category = _db.Categories.Find(id);
+            _db.Categories.Remove(category);
+            _db.SaveChanges();
+
             if (category == null)
             {
                 return NotFound();
             }
-
-            if (category.Products.Any())
-            {
-                return BadRequest("Cannot delete category because it has associated products.");
-            }
-
-            _db.Categories.Remove(category);
-            _db.SaveChanges();
 
             return NoContent();
         }
