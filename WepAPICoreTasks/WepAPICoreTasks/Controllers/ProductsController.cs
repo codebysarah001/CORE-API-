@@ -28,6 +28,15 @@ namespace WepAPICoreTasks.Controllers
         public IActionResult GetByID(int id)
         {
             var Products = _db.Products.Include(p => p.Category).FirstOrDefault(p => p.ProductId == id);
+
+            return Ok(Products);
+        }
+
+        [HttpGet("{id1}/{price}")]
+        public IActionResult GetByID1(int id1,int price)
+        {
+            var Products = _db.Products.Where(c=>c.CategoryId == id1 && Convert.ToDecimal(c.Price) > price).Count();
+
             return Ok(Products);
         }
     }
