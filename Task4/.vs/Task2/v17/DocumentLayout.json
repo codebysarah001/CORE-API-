@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63B8EC0D-FB2A-4A3E-97F1-4EE1CEAFC385}|Task2\\Task2.csproj|c:\\users\\orange\\desktop\\core_api\\core-api-\\task2\\task2\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63B8EC0D-FB2A-4A3E-97F1-4EE1CEAFC385}|Task2\\Task2.csproj|solutionrelative:task2\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63B8EC0D-FB2A-4A3E-97F1-4EE1CEAFC385}|Task2\\Task2.csproj|c:\\users\\orange\\desktop\\core_api\\core-api-\\task2\\task2\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63B8EC0D-FB2A-4A3E-97F1-4EE1CEAFC385}|Task2\\Task2.csproj|solutionrelative:task2\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63B8EC0D-FB2A-4A3E-97F1-4EE1CEAFC385}|Task2\\Task2.csproj|c:\\users\\orange\\desktop\\core_api\\core-api-\\task2\\task2\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63B8EC0D-FB2A-4A3E-97F1-4EE1CEAFC385}|Task2\\Task2.csproj|solutionrelative:task2\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\Task2\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Task2\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\Task2\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Task2\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAAAI4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:40:18.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\Task2\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Task2\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\Task2\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Task2\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAswF0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:44:12.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\Task2\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Task2\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task2\\Task2\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Task2\\Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAAGUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:14:56.869Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
