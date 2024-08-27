@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        #sidebar {
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+        }
+
+        #content {
+            margin-left: 250px; /* This ensures the content does not overlap with the sidebar */
+            width: calc(100% - 250px); /* Adjusts the width of the content to fill the remaining space */
+            padding: 20px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .navbar {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar" class="navbar bg-light flex-column shadow-sm p-3">
+        <a class="navbar-brand mb-4" href="#">MyWebsite</a>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Home/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Product/product.html">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Category/category.html">Category</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>Category</h2>
+        <a href="/Category/addcategory.html" class="btn btn-primary">Add Category</a>
+        <br><br>
+        <table class="table table-striped table-bordered" id="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Category Name</th>
+                    <th>Category Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script src="/Category/category.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

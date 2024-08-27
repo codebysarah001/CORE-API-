@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        #sidebar {
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .content {
+            margin-left: 270px; /* Adjust this margin to match the sidebar's width */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <nav id="sidebar" class="navbar bg-light flex-column shadow-sm p-3">
+            <a class="navbar-brand mb-4" href="#">MyWebsite</a>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Home/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Product/product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Category/category.html">Category</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="content">
+        <h2 class="mb-4">Add New Product</h2>
+        <form id="form">
+            <div class="mb-3">
+                <label for="ProductName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="ProductName" name="ProductName" placeholder="Enter Product name" required>
+            </div>
+            <div class="mb-3">
+                <label for="ProductImage" class="form-label">Product Image</label>
+                <input type="file" class="form-control" id="ProductImage" name="ProductImage" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="addProduct()">Add Product</button>
+        </form>
+    </div>
+    
+    <script src="Product/product.js"></script>
+    <script src="Product/addproduct.js"></script>
+    <script src="Category/category.js"></script>
+    <script src="Category/addcategory.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
