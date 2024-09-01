@@ -18,21 +18,20 @@ async function GetAllProducts(){
                 <img class="card-img-top" src="/images/${row.productImage}" alt="${row.productImage} (image not found)">
 
             </td>
+            <td>${row.description}</td>
+            <td>${row.categoryId}</td>
             <td>
-                <a href="/product/editproduct.html" class="btn btn-primary btn-sm">Edit</a>
-                <a href="/product/Details/1" class="btn btn-info btn-sm">Details</a>
-                <a href="/product/Delete/1" class="btn btn-danger btn-sm">Delete</a>
+                <a href="/Product/editproduct.html" onclick="Edit(${row.productId})" class="btn btn-primary btn-sm">Edit</a>
             </td>
             
         </tr>
         `  
     });
 }
-function GoToDetails(productId){
-    localStorage.setItem("ProductID",productId);
-    window.location.href = `/product/productDetails.html?productId=${productId}`;
+function Edit(productId) {
+    localStorage.setItem("ProductID", productId);
+    window.location.href = `/Product/editproduct.html`; 
 }
-function ClearStorage(){
-    localStorage.clear();
-}
+
 GetAllProducts();
+

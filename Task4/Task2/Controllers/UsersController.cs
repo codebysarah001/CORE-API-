@@ -78,7 +78,7 @@ namespace Task2.Controllers
         }
 
         // Add New User
-        [HttpPost]
+        [HttpPost("AddCategory")]
         public IActionResult AddNewUser([FromForm] UserDTO userdto)
         {
             var user = new User()

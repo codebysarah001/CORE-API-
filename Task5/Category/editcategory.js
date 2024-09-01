@@ -1,13 +1,22 @@
-const API = `https://localhost:44308/api/Categories/${CategoryID}`;
+document.getElementById("form").addEventListener("submit", updateCategory);
 
-var form = document.getElementById("form");
-async function updateCategory(){
+async function updateCategory(event) {
     event.preventDefault();
-    var formData = new FormData(form);
 
+    var x = localStorage.getItem("CategoryID");
+    const API = `https://localhost:44308/api/Categories/${x}`;
+    
+    var form = document.getElementById("form");
+    var formData = new FormData(form);
+    
     var response = await fetch(API, {
         method: "PUT",
         body: formData
-    })
-    alert("Product updated successfully!");
+    });
+
+    if (response.ok) {
+        alert("Category updated successfully!");
+    } else {
+        alert("Failed to update category.");
+    }
 }

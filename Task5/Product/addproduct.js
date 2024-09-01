@@ -1,18 +1,34 @@
-/** @format */
+const url = "https://localhost:44308/api/Products/AddProduct";
+var form = document.getElementById("form");
+console.log(form);
 
 async function addProduct() {
   event.preventDefault();
-  var form = document.getElementById("form");
-  const formData = new FormData(form);
 
-  const response = await fetch("https://localhost:44308/api/Products", {
+  const formData = new FormData(form);
+  console.log(formData.get("ProductName")); 
+  debugger
+
+  const response = await fetch(url, {
     method: "POST",
     body: formData,
   });
 
-  if (response.ok) {
-    alert("Successfully added!");
-  } else {
-    alert("Failed to add product. Please try again.");
-  }
+  var data = response;
+  alert("Product Added Succesfully!")
 }
+
+async function selectCat(){
+  const catURL ="https://localhost:44308/api/Categories/GetAllCategories";
+
+  let request = await fetch(catURL);
+  let categories = await request.json();
+
+  var select = document.getElementById("selectCat");
+  categories.forEach(option => {
+    select.innerHTML += 
+    `<option value="${option.categoryId}">${option.categoryName}</option>`;  
+  });
+}
+
+selectCat();

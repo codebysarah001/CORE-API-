@@ -59,5 +59,21 @@ namespace Task2.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("OrderDate/{date}/{productName}")]
+        public IActionResult GetByDate([FromQuery] DateOnly date, string productName)
+        {
+            var orderDate = _db.Orders.Where(c => c.OrderDate == date).ToList();
+            var product= _db.Products.Where(c => c.ProductName == productName).ToList();
+
+            var combinedData = new
+            {
+                Orders = orderDate,
+                Products = product
+            };
+
+            return Ok(combinedData);
+        }
     }
+   
 }

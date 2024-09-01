@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Task2.DTO;
 using Task2.Models;
 
 namespace Task2.Controllers
@@ -54,6 +55,7 @@ namespace Task2.Controllers
             return Ok(cat);
         }
 
+
         // DeleteCategory
         [HttpDelete]
         [Route("Category/Delete/{id:int}")]
@@ -81,5 +83,66 @@ namespace Task2.Controllers
             return NoContent();
         }
 
+        // Add New Category
+        [HttpPost("AddNewCategory")]
+        public IActionResult AddNewCategory([FromForm] CategoryDTO categrydto)
+        {
+            if (categrydto.CategoryImage != null)
+            {
+                var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+                if (!Directory.Exists(uploadsFolderPath))
+                {
+                    Directory.CreateDirectory(uploadsFolderPath);
+                }
+                var filePath = Path.Combine(uploadsFolderPath, categrydto.CategoryImage.FileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    categrydto.CategoryImage.CopyToAsync(stream);
+                }
+
+            }
+            var cat = new Category()
+            {
+                CategoryName = categrydto.CategoryName,
+                CategoryImage = categrydto.CategoryImage.FileName
+            };
+
+            _db.Categories.Add(cat);
+            _db.SaveChanges();
+            return Ok();
+        }
+
+        // Update Category
+        [HttpPut("{id}")]
+        public IActionResult UpdateCategory(int id, [FromForm] CategoryDTO categrydto)
+        {
+            var categoryID = _db.Categories.Find(id);
+
+            if (categrydto.CategoryImage != null)
+            {
+                var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+                if (!Directory.Exists(uploadsFolderPath))
+                {
+                    Directory.CreateDirectory(uploadsFolderPath);
+                }
+                var filePath = Path.Combine(uploadsFolderPath, categrydto.CategoryImage.FileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    categrydto.CategoryImage.CopyToAsync(stream);
+                }
+
+            }
+
+            if (categoryID == null)
+            {
+                return NotFound();
+            }
+            categoryID.CategoryName = categrydto.CategoryName;
+            categoryID.CategoryImage = categrydto.CategoryImage.FileName;
+
+            _db.Categories.Update(categoryID);
+            _db.SaveChanges();
+            return Ok();
+        }
     }
 }

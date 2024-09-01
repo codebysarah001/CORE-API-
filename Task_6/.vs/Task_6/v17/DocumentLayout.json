@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task_6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orange\\AppData\\Local\\Temp\\.vsdbgsrc\\2afa9c3cb1fe1586aa0213467a61b62cbb5aa4464f262300c41790ab2605452d\\CartItemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64313BCB-8FA3-4ED2-876C-90637B6D5348}|Task_6\\Task_6.csproj|c:\\users\\orange\\desktop\\core_api\\core-api-\\task_6\\task_6\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64313BCB-8FA3-4ED2-876C-90637B6D5348}|Task_6\\Task_6.csproj|solutionrelative:task_6\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\AppData\\Local\\Temp\\.vsdbgsrc\\2afa9c3cb1fe1586aa0213467a61b62cbb5aa4464f262300c41790ab2605452d\\CartItemController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\2afa9c3cb1fe1586aa0213467a61b62cbb5aa4464f262300c41790ab2605452d\\CartItemController.cs",
+              "ToolTip": "C:\\Users\\Orange\\AppData\\Local\\Temp\\.vsdbgsrc\\2afa9c3cb1fe1586aa0213467a61b62cbb5aa4464f262300c41790ab2605452d\\CartItemController.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\2afa9c3cb1fe1586aa0213467a61b62cbb5aa4464f262300c41790ab2605452d\\CartItemController.cs [Read Only]",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAEwEIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T07:57:12.222Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task_6\\Task_6\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "Task_6\\Controllers\\CartItemController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Core_API\\CORE-API-\\Task_6\\Task_6\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "Task_6\\Controllers\\CartItemController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAcwEQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T13:25:51.534Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

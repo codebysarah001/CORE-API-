@@ -84,7 +84,7 @@ namespace Task2.Controllers
         }
 
         // Add New Category
-        [HttpPost]
+        [HttpPost("AddNewCategory")]
         public IActionResult AddNewCategory([FromForm] CategoryDTO categrydto)
         {
             var cat = new Category()

@@ -1,5 +1,5 @@
 async function GetAllProducts(){
-    const API = 'https://localhost:7214/api/Products'
+    const API = 'https://localhost:44308/api/Products'
     let categoryIdFromStorage = localStorage.getItem('CategoryID');
 
     let request = await fetch(API);
@@ -14,6 +14,7 @@ async function GetAllProducts(){
         `<div class="card" style="width: 18rem;">
             <h5 class="card-title">${product.productName}</h5>
             <img class="card-img-top" src="/images/${product.productImage}" alt="${product.productImage} (image not found)">
+            <p>${product.description}</p>
             <div class="card-body">
                 <button onclick="GoToDetails(${product.productId})">Go To Details</button>
             </div>

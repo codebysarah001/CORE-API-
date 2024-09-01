@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Task2.DTO;
 using Task2.Models;
 
 namespace Task2.Controllers
@@ -74,6 +75,42 @@ namespace Task2.Controllers
             _db.SaveChanges();
 
             return NoContent();
+        }
+
+        // Add New User
+        [HttpPost]
+        public IActionResult AddNewUser([FromForm] UserDTO userdto)
+        {
+            var user = new User()
+            {
+                Username = userdto.Username,
+                Password = userdto.Password,
+                Email = userdto.Email
+            };
+
+            _db.Users.Add(user);
+            _db.SaveChanges();
+            return Ok();
+        }
+
+        // Update User
+        [HttpPut("{id}")]
+        public IActionResult UpdateUser(int id, [FromForm] UserDTO userdto)
+        {
+            var userID = _db.Users.Find(id);
+
+            if (userID == null)
+            {
+                return NotFound();
+            }
+            userID.Username = userdto.Username;
+            userID.Password = userdto.Password;
+            userID.Email = userdto.Email;
+
+
+            _db.Users.Update(userID);
+            _db.SaveChanges();
+            return Ok();
         }
     }
 }

@@ -1,5 +1,6 @@
 async function GetAllCategories(){
-    const API = 'https://localhost:7214/api/Categories/GetAllCategories'
+    const API = 'https://localhost:44308/api/Categories/GetAllCategories'
+    
     let request = await fetch(API);
     let response = await request.json();
 
